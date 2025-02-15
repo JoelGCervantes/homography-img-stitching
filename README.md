@@ -1,4 +1,4 @@
-# homography-img-stitching-
+# homography-img-stitching
 Homography panorama using SIFT, RANSAC, and bilinear interpolation
 
 # Image stitching using homography and RANSAC 
