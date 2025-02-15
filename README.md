@@ -17,3 +17,27 @@ git clone https://github.com/JoelGCervantes/homography-img-stitching.git
 python img-stitch-panorama.py <image_1> <image_2> <output_image>
 
 example: python img-stitch-panorama.py img1.jpg img2.jpg panorama.jpg
+
+# How it works 
+1. Feature Extraction & Matching
+   - Converts images to grayscale
+   - Detects SIFT keypoints and descriptors
+   - Uses Brute Force Matcher (BFMatcher) to find corresponding points
+  
+2.  Homography Estimation (RANSAC)
+   - Uses RANSAC to estimate a homography matrix, filtering out incorrect matches
+   - Computes transformation matrix H that aligns img_1 with img_2
+
+3. Warping & Blending
+   - Uses the inverse homography to warp img_1
+   - Applies bilinear interpolation for smooth warping
+   - Performs average blending to merge both images into a panorama
+
+
+
+
+
+
+
+
+
