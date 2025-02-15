@@ -11,4 +11,8 @@ This project implements image stitching to create a panorama by aligning and ble
 - Warps and blends images using barward warping with bilinear interpolation
 
 # installation 
+git clone https://github.com/JoelGCervantes/homography-img-stitching.git
 
+# Usage 
+python img-stitch-panorama.py <image_1> <image_2> <output_image>
+example: python img-stitch-panorama.py img1.jpg img2.jpg panorama.jpg
